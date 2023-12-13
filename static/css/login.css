@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #D9D9D9;
+    color: #432F2F;
+    overflow: hidden;
+}
+
+.mainbody {
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+    align-items: center;
+}
+
+.row1 {
+    width: 550px;
+    height: 350px;
+    /* border: 1px solid black; */
+    line-height: 0;
+}
+.row1 .image {
+    display: flex;
+    justify-content: center;
+    height: 450px;
+    align-items: center;
+}
+.row1 .image img{
+    width: 400;
+    height: 300px;
+    margin-left: 50px;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+}
+
+.middle_line {
+    height: 450px;
+    border: 0.5px solid #432F2F;
+}
+    
+
+.row2 {
+    width: 550px;
+    height: 450px;
+    /* border: 1px solid black; */
+}
+.row2 .row2_items {
+    width: 550px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row2 .row2_items .items   {
+    text-align: center;
+}
+.row2 .row2_items .items input {
+    line-height: 20px;
+    margin-bottom: 10px;
+    background-color: #D9D9D9;
+    border: none;
+    border-bottom: 1px solid #432F2F;
+    width: 280px;
+}
+.items button:hover {
+    background-color: #291d1d;
+    transition: 0.7s ease;
+}
+input[type="text"], input[type="password"], input[type="tel"] {
+    text-indent: 30px;
+    color: #432F2F;
+}       
+input:focus {
+    outline: none;
+}
+.items p {
+    font-size: 13px;
+}
+.items p a:hover {
+    color: rgb(91, 39, 49);
+    transition: 0.7s ease;
+}
+
+.items button {
+    background-color: #432F2F;
+    color: #D9D9D9;
+    padding: 12px 30px;
+    border: 1px solid #432F2F;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.items p a {
+    text-decoration: none;
+    color: crimson;
+}
+
+input::placeholder {
+    text-indent: 30px;
+}

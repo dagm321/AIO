@@ -1,0 +1,142 @@
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/buy.css' %}">
+    <script src="https://kit.fontawesome.com/6fb0a3828a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="mainbody">
+
+
+        <!-----------header-------------->
+        <div class="header">
+            <h1>AIO</h1>
+            <input type="text" placeholder="Search" class="search">
+            <div class="icons">
+                <a href=""><i class="fa-solid fa-envelope"></i></a>
+                <a href=""><i class="fa-solid fa-user"></i></a>
+            </div>
+
+            <a id="sellbutton" href="">Sell</a>
+        </div>
+        <!------------end header-------------->
+        <div class="line">
+            <div class="header_line"></div>
+        </div>
+        <!-----------posts---------->
+        <div class="post1">
+            <div class="row">
+                <!------------------- post body-------- -->
+                {% for number in numbers %}
+                <div class="post_items">
+                    <div class="post_header">
+                        <img id="post_profile_pic" src="{% static 'image/profile.jpg' %}" alt="">
+                        <div class="username_and_date">
+                            <p id="username">username</p>
+                            <p id="date">Nov 23, 2024</p>
+                        </div>
+                    </div>
+                    <div class="product_title">
+                        <h4>product title</h4>
+                    </div>
+                    <img id="product_image" src="{% static 'image/headset.jpg' %}" alt="">
+                    <div class="product_description">
+                        <p>This is some description about
+                            the product and this is some decriopiton about it</p>
+                    </div>
+                    <div class="product_price"><p>100$</p></div>
+                    <div class="buy_button"><a href="">Buy</a></div>
+                </div>
+                {%endfor%}
+                <!---------------end post-------------->
+            </div>
+            <div class="row">
+                <!------------------- post body-------- -->
+                {% for number in numbers %}
+                <div class="post_items">
+                    <div class="post_header">
+                        <img id="post_profile_pic" src="{% static 'image/profile.jpg' %}" alt="">
+                        <div class="username_and_date">
+                            <p id="username">username</p>
+                            <p id="date">Nov 23, 2024</p>
+                        </div>
+                    </div>
+                    <div class="product_title">
+                        <h4>product title</h4>
+                    </div>
+                    <img id="product_image" src="{% static 'image/bicycle.jpg' %}" alt="">
+                    <div class="product_description">
+                        <p>This is some description about
+                            the product and this is some decriopiton about it</p>
+                    </div>
+                    <div class="product_price"><p>100$</p></div>
+                    <div class="buy_button"><a href="">Buy</a></div>
+                </div>
+                {%endfor%}
+                <!---------------end post-------------->
+            </div>
+        </div>
+        <!----------banner---------->
+        <div class="banner">
+            <div class="col-1">
+                <div class="banner_image"></div>
+            </div>
+            <div class="col-2">
+                <div class="col-2_body">
+                    <h3>You can sell whatever you want</h3>
+                    <div class="body_2">
+                        <p>Quite easy steps</p>
+                        <li>Take a Picture</li>
+                        <li>Write short description</li>
+                        <li>Set the price</li>
+                        <li>Upload</li>
+                    </div>
+                    <div class="banner_button">
+                        <a href="">Sell here &nbsp;<i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!----------endbanner------------->
+
+        
+
+                <!-----------posts---------->
+                <div class="post1">
+                    <div class="row">
+                        <!------------------- post body-------- -->
+                        {% for number in numbers %}
+                        <div class="post_items">
+                            <div class="post_header">
+                                <img id="post_profile_pic" src="{% static 'image/profile.jpg' %}" alt="">
+                                <div class="username_and_date">
+                                    <p id="username">username</p>
+                                    <p id="date">Nov 23, 2024</p>
+                                </div>
+                            </div>
+                            <div class="product_title">
+                                <h4>product title</h4>
+                            </div>
+                            <img id="product_image" src="{% static 'image/headset.jpg' %}" alt="">
+                            <div class="product_description">
+                                <p>This is some description about
+                                    the product and this is some decriopiton about it</p>
+                            </div>
+                            <div class="product_price"><p>100$</p></div>
+                            <div class="buy_button"><a href="">Buy</a></div>
+                        </div>
+                        {%endfor%}
+                        <!---------------end post-------------->
+                    </div>
+
+        <div class="footer"></div>
+    </div>
+
+</body>
+</html>

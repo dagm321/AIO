@@ -1,0 +1,222 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #D9D9D9;
+    color: #432F2F;
+    overflow: auto;
+}
+.mainbody {
+   
+}
+.mainbody .header {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.line {
+    display: flex;
+    justify-content: center;
+}
+.header_line {
+    width: 800px;
+    border: 0.5px solid #432F2F;
+}
+
+
+.header .search {
+    height: 40px;
+    width: 220px;
+    border: 1px solid #432F2F;
+    background: none;
+    border-radius: 50px;
+}
+.header input:focus {
+    outline:  none;
+}
+.header input[type="text"] {
+    text-indent: 20px;
+}
+.header input::placeholder {
+    text-indent: 20px;
+}
+
+.header .icons{
+    height: 40px;
+    width: 120px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.icons i {
+    font-size: 22px;
+    color: #432F2F;
+}
+.header #sellbutton {
+    text-decoration: none;
+    background-color: #432F2F;
+    color: #D9D9D9;
+    padding: 10px 30px;
+    border: 1px solid #432F2F;
+    border-radius: 50px;
+}
+.header #sellbutton:hover {
+    background-color: #464141;
+    transition: 0.6s ease;
+}
+.post1 {
+    height: auto;
+}
+.row .post_items {
+    height: 300px;
+    width: 350px;
+    /* box-shadow: 0px 2px 5px 0px; */
+}
+.row {
+    display: flex;
+    justify-content: space-evenly;
+}
+.row .post_items {
+    height: 350px;
+    width: 350px;
+}
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+.footer {
+    margin-top: 50px;
+    height: 60vh;
+    width: 100%;
+    background-color: #432F2F;
+    display: flex;
+    justify-content: space-between;
+}
+.post_header {
+    width: 350px;
+    height: 60px;
+    display: flex;
+}
+#post_profile_pic {
+    margin-left: 10px;
+    margin-top: 3px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+.username_and_date p{
+    line-height: 0;
+}
+.username_and_date #username {
+    font-weight: bold;
+    font-size: 12px;
+}
+.username_and_date #date {
+    font-size: 10px;
+}
+.username_and_date {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.product_title {
+    display: flex;
+    justify-content: center;
+    line-height: 0;
+    margin-top: -25px;
+}
+#product_image {
+    width: 350px;
+    height: 200px;
+    margin-top: -8px;
+}
+.product_description p {
+    font-size: 12px;
+    margin: 2;
+}
+.product_price {
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -30px;
+    margin-right: 15px;
+}
+.product_price p {
+    font-size: 20px;
+    font-weight: bolder;
+}
+.buy_button {
+    display: flex;
+    justify-content: center;
+    margin-top: -30px;
+}
+.buy_button a {
+    text-decoration: none;
+    border: 3px solid #432F2F;
+    border-radius: 10px;
+    padding: 10px 30px;
+    color: #432F2F;
+}
+.buy_button a:hover{
+    background-color: #432F2F;
+    color: #D9D9D9;
+    transition: 0.5s ease;
+}
+.banner {
+    margin-top: 50px;
+    height: 60vh;
+    width: 100%;
+    background-color: #432F2F;
+    display: flex;
+}
+.col-1 {
+    width: 50%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+}
+.banner_image {
+    width: 300px;
+    height: 170px;
+    background-image: url("../../static/image/Sale.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 300px;
+}
+.col-2 {
+    width: 50%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.col-2 .col-2_body {
+    width: 380px;
+    height: 250px;
+}
+.col-2_body li {
+    margin-left: 30px;
+    font-size: 12px;
+    line-height: 20px;
+}
+.col-2_body h3 {
+    font-size: 25px;
+}
+.banner_button {
+    display: flex;
+    justify-content: flex-end;
+}
+.col-2_body a {
+    text-decoration: none;
+    border: 1px solid #D9D9D9;
+    padding: 10px 30px;
+    border-radius: 50px;
+    color: #432F2F;
+    background-color: #D9D9D9;
+}
+.body_2 {
+    margin-left: 30px;
+}
