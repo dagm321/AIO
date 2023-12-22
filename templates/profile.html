@@ -3,10 +3,61 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>profile</title>
+    <title>Profile</title>
     <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6fb0a3828a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <!-----------header-------------->
+    <div class="header">
+        <h1>AIO</h1>
+        <div class="icons">
+            <a href=""><i class="fa-solid fa-house"></i></a></i>
+            <a href=""><i class="fa-solid fa-envelope"></i></a>
+            <a href=""><i class="fa-solid fa-user"></i></a>
+        </div>
+
+        <!-- <a id="sellbutton" href="">Buy</a> -->
+        <div class="username_and_profilepic">
+            <img id="post_profile_pic" src="{% static 'image/profile.jpg' %}" alt="">
+            <p id="username">username</p>
+        </div>
+    </div>
+    <div class="line">
+        <div class="header_line"></div>
+    </div>
+    <!------------end header-------------->
+    <div class="main">
+        <div class="main_body">
+            <div class="display_profile">
+                <div class="profile">
+                    <img src="{% static 'image/profile.jpg'%}" alt="">
+                    <p>Username</p>
+                </div>
+            </div>
+            <div class="information">
+                <h3>My Profile</h3>
+                <div class="info_body">
+                    <div class="user_question">
+                        <p>Full Name</p>
+                        <p>Username</p>
+                        <p>Bio</p>
+                        <p>Phone Number</p>
+                    </div>
+                    <div class="user_information">
+                        <p>Abebe Kebede</p>
+                        <p>Username</p>
+                        <p style="text-align: start;">This is my description about me or my bio This is my description about me or my bio</p>
+                        <p>+251985430923</p>
+                    </div>
+                </div>
+                <a href="">Edit</a>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

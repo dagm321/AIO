@@ -5,8 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sell</title>
     <link rel="stylesheet" href="{% static 'css/sell.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6fb0a3828a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <!-----------header-------------->
+    <div class="header">
+        <h1>AIO</h1>
+        <div class="icons">
+            <a href=""><i class="fa-solid fa-house"></i></a></i>
+            <a href=""><i class="fa-solid fa-envelope"></i></a>
+            <a href=""><i class="fa-solid fa-user"></i></a>
+        </div>
+
+        <a id="sellbutton" href="">Buy</a>
+    </div>
+    <div class="line">
+        <div class="header_line"></div>
+    </div>
+    <!------------end header-------------->
+
+    <div class="bigtitle">
+        <h1>Experiance the Freedom of Commision-free Selling</h1>
+    </div>
+    <!--------------main body----------------------->
+    <div class="mainbody">
+        <div class="post_product_page">
+            <div class="post-req">
+                <div class="questions">
+                    <p id="product_title">product title</p>
+                    <p>Short Description</p>
+                    <p id="product_image">Product Image</p>
+                    <p id="price">price</p>
+                    <p id="status">status</p>
+                </div>
+                <form action="" method="">
+                    <div class="inputs">
+                        <input type="text" placeholder="Product Title" name="" id="product_title_input">
+                        <input type="text" placeholder="Short Description" name="" id="description">
+                        <input type="file" accept="image/*" name="" id="image">
+                        <label for="image">Upload <i class="fa-solid fa-upload"></i></label>
+                        <input type="number" placeholder="Price" name="" id="price">
+                        <div class="status">
+                            <p>New</p>
+                            <input type="checkbox" name="" id="">
+                            <p>Used</p>
+                            <input type="checkbox" name="" id="">
+                        </div>
+                    </div>
+                    <div class="button">
+                        <button>Post</button>
+                    </div>
+                    </form>
+                </div>
+        </div>
+        <!-----IMAGE------->
+        <div class="image"></div>
+    </div>
+
+    <!------------------end main-------------------------->
 </body>
 </html>

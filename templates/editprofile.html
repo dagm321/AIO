@@ -3,10 +3,47 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>editprofile</title>
+    <title>Edit Profile</title>
     <link rel="stylesheet" href="{% static 'css/editprofile.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6fb0a3828a.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    
+<body>  
+    <a href="">Go back</a>
+    <div class="main">
+        <div class="main_body">
+            <div class="information">
+                <div class="display_profile">
+                    <div class="profile">
+                        <img src="{% static 'image/profile.jpg'%}" alt="">
+                        <input type="file" name="" id="editpro">
+                        <label for="editpro">Edit Picture</label>
+                    </div>
+                </div>
+                <div class="info_body">
+                    <div class="user_question">
+                        <p>Full Name</p>
+                        <p>Username</p>
+                        <p>Bio</p>
+                        <p>Phone Number</p>
+                        <p>Password</p>
+                        <p>Re-enter Password</p>
+                    </div>
+                    <div class="user_information">
+                        <input type="text" value="Abebe Kedebe" name="" id="">
+                        <input type="text" value="Username" name="" id="">
+                        <input type="text" value="this is my bio and description..." name="" id="">
+                        <input type="tel" value="+25198734932" name="" id="">
+                        <input type="password" value="password" name="" id="">
+                        <input type="password" value="Re-enter password" name="" id="">
+                    </div>
+                </div>
+                <div class="btn"><a href="">Save</a></div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

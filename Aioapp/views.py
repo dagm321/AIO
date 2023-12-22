@@ -1,6 +1,12 @@
 from django.shortcuts import render, redirect, HttpResponse
 
-# Create your views here.
+def signup(request):
+
+    return render(request, 'signup.html')
+
+def login(request):
+
+    return render(request, 'login.html')
 
 def buy(request):
     numbers = range(1, 4)
@@ -25,13 +31,7 @@ def first(request):
 
     return render(request, 'first.html')
 
-def signup(request):
 
-    return render(request, 'signup.html')
-
-def login(request):
-
-    return render(request, 'login.html')
 
 def editprofile(request):
 
