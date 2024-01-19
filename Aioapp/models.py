@@ -20,7 +20,7 @@ class CustomUserManager(BaseUserManager):
             full_name=full_name,
             username=username,
             phone_number=phone_number,
-            password=password,
+            password=password,  
             **extra_fields
         )
         user.is_admin = True
