@@ -20,7 +20,7 @@
             <a href=""><i class="fa-solid fa-user"></i></a>
         </div>
 
-        <a id="sellbutton" href="">Buy</a>
+        <a id="sellbutton" href="{% url 'buy' %}">Buy</a>
     </div>
     <div class="line">
         <div class="header_line"></div>
@@ -41,18 +41,19 @@
                     <p id="price">price</p>
                     <p id="status">status</p>
                 </div>
-                <form action="" method="">
+                <form method="post">
+                    {% csrf_token %}
                     <div class="inputs">
-                        <input type="text" placeholder="Product Title" name="" id="product_title_input">
-                        <input type="text" placeholder="Short Description" name="" id="description">
-                        <input type="file" accept="image/*" name="" id="image">
-                        <label for="image">Upload <i class="fa-solid fa-upload"></i></label>
-                        <input type="number" placeholder="Price" name="" id="price">
+                        <input type="text" placeholder="Product Title" name="product_title" id="product_title_input">
+                        <input type="text" placeholder="Short Description" name="description" id="description">
+                        <input type="file" accept="image/*" name="image" id="image">
+                        <label for="image" >Upload <i class="fa-solid fa-upload"></i></label>
+                        <input type="number" placeholder="Price" name="price" id="price">
                         <div class="status">
                             <p>New</p>
-                            <input type="checkbox" name="" id="">
+                            <input type="checkbox" name="new_checkbox" id="">
                             <p>Used</p>
-                            <input type="checkbox" name="" id="">
+                            <input type="checkbox" name="used_checkbox" id="">
                         </div>
                     </div>
                     <div class="button">

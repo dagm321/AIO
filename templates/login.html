@@ -23,10 +23,11 @@
             <div class="row2_items">
                 <div class="items">
                     <h1>Log in</h1>
-                    <form action="" method="">
-                        <input type="text" name="" placeholder="Username" id=""><br>
-                        <input type="password" name="" placeholder="Password" id=""><br>
-                        <p>Don't have an account ? <a href="">Sign up</a></p>
+                    <form method="post">
+                        {% csrf_token %}
+                        <input type="text" name="username" placeholder="Username" id=""><br>
+                        <input type="password" name="password" placeholder="Password" id=""><br>
+                        <p>Don't have an account ? <a href="{% url 'signup' %}">Sign up</a></p>
                         <button>Log in</button>
                     </form>
                 </div>

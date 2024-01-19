@@ -1,15 +1,19 @@
 from django.shortcuts import render, redirect, HttpResponse
+from django.contrib.auth import authenticate, login
+from .models import *
 
 def signup(request):
 
+
     return render(request, 'signup.html')
 
-def login(request):
+def user_login(request):
 
     return render(request, 'login.html')
 
 def buy(request):
     numbers = range(1, 4)
+    
     context = {
         'numbers' : numbers
     }

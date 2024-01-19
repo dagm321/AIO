@@ -23,13 +23,14 @@
             <div class="row2_items">
                 <div class="items">
                     <h1>SIGN UP</h1>
-                    <form action="" method="post">
-                        <input type="text" name="" placeholder="Full Name" id=""><br>
-                        <input type="text" name="" placeholder="Username" id=""><br>
-                        <input type="tel" name="" placeholder="Phone Number" id=""><br>
-                        <input type="password" name="" placeholder="Password" id=""><br>
-                        <input type="password" name="" placeholder="Re-enter Password" id=""><br>
-                        <p>Have an account ? <a href="">Log in</a></p>
+                    <form method="post">
+                        {%csrf_token%}
+                        <input type="text" name="full_name" placeholder="Full Name" id=""><br>
+                        <input type="text" name="username" placeholder="Username" id=""><br>
+                        <input type="text" name="phone_number" placeholder="Phone Number" id=""><br>
+                        <input type="password" name="password" placeholder="Password" id=""><br>
+                        <input type="password" name="check_password" placeholder="Re-enter Password" id=""><br>
+                        <p>Have an account ? <a href="{% url 'login' %}">Log in</a></p>
                         <button>Sign Up</button>
                     </form>
                 </div>
