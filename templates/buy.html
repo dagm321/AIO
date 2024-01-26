@@ -19,8 +19,8 @@
             <h1>AIO</h1>
             <input type="text" placeholder="Search" class="search">
             <div class="icons">
-                <a href=""><i class="fa-solid fa-envelope"></i></a>
-                <a href=""><i class="fa-solid fa-user"></i></a>
+                <a href="{% url 'message' %}"><i class="fa-solid fa-envelope"></i></a>
+                <a href="{% url 'profile' %}"><i class="fa-solid fa-user"></i></a>
             </div>
 
             <a id="sellbutton" href="{% url 'sell' %}">Sell</a>
@@ -36,24 +36,23 @@
         <div class="post1">
             <div class="row">
                 <!------------------- post body-------- -->
-                {% for number in numbers %}
+                {% for product in products %}
                 <div class="post_items">
                     <div class="post_header">
                         <img id="post_profile_pic" src="{% static 'image/profile.jpg' %}" alt="">
                         <div class="username_and_date">
-                            <p id="username">username</p>
-                            <p id="date">Nov 23, 2024</p>
+                            <p id="username">{{ product.username }}</p>
+                            <p id="date">{{ product.date }}</p>
                         </div>
                     </div>
                     <div class="product_title">
-                        <h4>product title</h4>
+                        <h4>{{ product.product_title }}</h4>
                     </div>
                     <img id="product_image" src="{% static 'image/headset.jpg' %}" alt="">
                     <div class="product_description">
-                        <p>This is some description about
-                            the product and this is some decriopiton about it</p>
+                        <p>{{ product.description }}</p>
                     </div>
-                    <div class="product_price"><p>100$</p></div>
+                    <div class="product_price"><p>{{ product.price }}$</p></div>
                     <div class="buy_button"><a href="">Buy</a></div>
                 </div>
                 {%endfor%}

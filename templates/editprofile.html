@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/6fb0a3828a.js" crossorigin="anonymous"></script>
 </head>
 <body>  
-    <a href="">Go back</a>
+    <a href="{% url 'profile' %}">Go back</a>
     <div class="main">
         <div class="main_body">
             <div class="information">
@@ -31,16 +31,19 @@
                         <p>Password</p>
                         <p>Re-enter Password</p>
                     </div>
-                    <div class="user_information">
-                        <input type="text" value="Abebe Kedebe" name="" id="">
-                        <input type="text" value="Username" name="" id="">
-                        <input type="text" value="this is my bio and description..." name="" id="">
-                        <input type="tel" value="+25198734932" name="" id="">
-                        <input type="password" value="password" name="" id="">
-                        <input type="password" value="Re-enter password" name="" id="">
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="user_information">
+                            <input type="text" value="{{ user.full_name }}" name="full_name" id="">
+                            <input type="text" value="{{user.username}}" name="username" id="">
+                            <input type="text" value="{{user.description}}" name="description" id="">
+                            <input type="text" value="{{user.phone_number}}" name="phone_number" id="">
+                            <input type="password" value="{{user.password}}" name="password" id="">
+                            <input type="password" value="{{user.password}}" name="re_password" id="">
+                        </div>
                     </div>
-                </div>
-                <div class="btn"><a href="">Save</a></div>
+                    <div class="btn"><button>Save</button></div>
+                    </form>
             </div>
         </div>
     </div>

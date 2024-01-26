@@ -23,7 +23,7 @@
         <!-- <a id="sellbutton" href="">Buy</a> -->
         <div class="username_and_profilepic">
             <img id="post_profile_pic" src="{% static 'image/profile.jpg' %}" alt="">
-            <p id="username">username</p>
+            <p id="username">{{ user.username }}</p>
         </div>
     </div>
     <div class="line">
@@ -35,7 +35,7 @@
             <div class="display_profile">
                 <div class="profile">
                     <img src="{% static 'image/profile.jpg'%}" alt="">
-                    <p>Username</p>
+                    <p>{{ user.username }}</p>
                 </div>
             </div>
             <div class="information">
@@ -48,13 +48,13 @@
                         <p>Phone Number</p>
                     </div>
                     <div class="user_information">
-                        <p>Abebe Kebede</p>
-                        <p>Username</p>
-                        <p style="text-align: start;">This is my description about me or my bio This is my description about me or my bio</p>
-                        <p>+251985430923</p>
+                        <p>{{ user.full_name }}</p>
+                        <p>{{user.username}}</p>
+                        <p style="text-align: start;">{{ user.description }}</p>
+                        <p>{{ user.phone_number }}</p>
                     </div>
                 </div>
-                <a href="">Edit</a>
+                <a href="{% url 'editprofile' %}">Edit</a>
             </div>
         </div>
     </div>
