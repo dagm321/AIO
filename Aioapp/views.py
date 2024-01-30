@@ -38,7 +38,7 @@ def user_login(request):
 # @login_required
 def buy(request):
     numbers = range(1, 4)
-    products = Product.objects.all()
+    products = Product.objects.order_by('-date')
     context = {
         'numbers' : numbers,
         'products' : products
@@ -50,7 +50,7 @@ def sell(request):
     if request.method == 'POST':
         product_title = request.POST.get('product_title')
         description = request.POST.get('description')
-        image = request.POST.get('image')
+        image = request.FILES.get('image')
         price = request.POST.get('price')
         new_checkbox = request.POST.get('new_checkbox')
         used_checkbox = request.POST.get('used_checkbox')
@@ -66,8 +66,8 @@ def sell(request):
         if not (used_checkbox or new_checkbox):
             raise Exception("Error: Please provide a product status")
         
-        # if not image:
-        #     raise Exception("Error: please provide an image")
+        if not image:
+            raise Exception("Error: please provide an image")
 
         if not request.user.is_authenticated:
             raise PermissionError("Please login first")
@@ -113,6 +113,8 @@ def editprofile(request):
         new_phone_number = request.POST.get('phone_number')
         user.password = request.POST.get('password')
         re_password = request.POST.get('re_password')
+        image = request.FILES.get('image')
+        user.profile_picture = image
         # user.set_password(password)
         if (user.phone_number == new_phone_number):
             user.phone_number = new_phone_number
@@ -121,6 +123,7 @@ def editprofile(request):
         else :
             raise Exception("phone number must be unique")
         user.save()
+
         
         # Update the session to avoid automatic logout after password change
         update_session_auth_hash(request, user)

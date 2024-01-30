@@ -35,7 +35,7 @@ class User(AbstractBaseUser):
     phone_number = models.CharField(max_length=100, blank=False, unique = True)
     username = models.CharField(max_length=100, primary_key= True, unique=True)
     password = models.CharField(max_length=100, blank=False, null=False)
-    profile_picture = models.ImageField(null=True, blank=True)
+    profile_picture = models.ImageField(null=True, upload_to='profile_pics', blank=True)
     description = models.TextField(blank=True, null=True)
     is_active = models.BooleanField(default=True)   
     is_staff = models.BooleanField(default=False)
@@ -65,7 +65,7 @@ class Product(models.Model):
     status = models.CharField(max_length=100, blank=False, null=False)
     image = models.ImageField(blank=False, upload_to='image', null=False)
     date = models.DateTimeField(default=timezone.now)
-    description = models.TextField(blank=False, null=False)
+    description = models.TextField(max_length=87, blank=False, null=False)
     username = models.ForeignKey(User, on_delete = models.CASCADE)
 
     def __str__(self):

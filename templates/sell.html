@@ -41,7 +41,7 @@
                     <p id="price">price</p>
                     <p id="status">status</p>
                 </div>
-                <form method="post">
+                <form method="post" enctype="multipart/form-data">
                     {% csrf_token %}
                     <div class="inputs">
                         <input type="text" placeholder="Product Title" name="product_title" id="product_title_input">
