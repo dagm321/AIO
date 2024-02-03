@@ -21,10 +21,12 @@
             <div class="icons">
                 <a href="{% url 'message' %}"><i class="fa-solid fa-envelope"></i></a>
                 <a href="{% url 'profile' %}"><i class="fa-solid fa-user"></i></a>
-                <a href="{% url 'profile' %}"><i class="fa-solid fa-right-from-bracket"></i></i></a>
+                <a href="{% url 'logout' %}"><i class="fa-solid fa-right-from-bracket"></i></i></a>
             </div>
-
-            <a id="sellbutton" href="{% url 'sell' %}">Sell</a>
+            <div class="cart">
+                <a id="sellbutton" href="{% url 'sell' %}">Sell <i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+          
         </div>
         <div class="line">
             <div class="header_line"></div>
@@ -40,9 +42,13 @@
                 {% for product in products %}
                 <div class="post_items">
                     <div class="post_header"> 
-                        <img id="post_profile_pic" src="{% static 'image/profile.jpg' %}" alt="">
+                        {% if product.user.profile_picture %}
+                            <img id="post_profile_pic" src="{{ product.user.profile_picture.url }}" alt="">
+                        {% else %}
+                            <img id="post_profile_pic" src="{% static 'image/profile.jpg' %}" alt="">
+                        {% endif %}
                         <div class="username_and_date">
-                            <p id="username">{{ product.username }}</p>
+                            <p id="username">{{ product.user.username }}</p>
                             <p id="date">{{ product.date }}</p>
                         </div>
                     </div>
@@ -79,7 +85,11 @@
                             the product and this is some decriopiton about it</p>
                     </div>
                     <div class="product_price"><p>100$</p></div>
-                    <div class="buy_button"><a href="">Buy</a></div>
+                    
+                    <div class="buy_button">
+                        <p>Status</p>
+                        <a href="">Buy</a>
+                    </div>
                 </div>
                 {%endfor%}
                 <!---------------end post-------------->

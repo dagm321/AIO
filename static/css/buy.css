@@ -50,6 +50,7 @@ body {
 .icons i {
     font-size: 22px;
     color: #432F2F;
+    margin-left: 20px;
 }
 .header #sellbutton {
     text-decoration: none;
@@ -152,6 +153,9 @@ body {
     justify-content: center;
     margin-top: -30px;
 }
+/* .buy_button p {
+    align-self: flex-start;
+} */
 .buy_button a {
     text-decoration: none;
     border: 3px solid #432F2F;

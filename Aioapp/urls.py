@@ -15,6 +15,7 @@ urlpatterns = [
     path('editprofile/', views.editprofile, name='editprofile'),
     path('message/', views.message, name='message'),
     path('popups/', views.popups, name='popups'),
+    path('logout/', views.custom_logout, name='logout'),
 ]
 
 # if Settings.DEBUG:

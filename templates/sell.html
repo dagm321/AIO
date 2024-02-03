@@ -15,9 +15,9 @@
     <div class="header">
         <h1>AIO</h1>
         <div class="icons">
-            <a href=""><i class="fa-solid fa-house"></i></a></i>
-            <a href=""><i class="fa-solid fa-envelope"></i></a>
-            <a href=""><i class="fa-solid fa-user"></i></a>
+            <a href="{% url 'message' %}"><i class="fa-solid fa-envelope"></i></a>
+            <a href="{% url 'profile' %}"><i class="fa-solid fa-user"></i></a>
+            <a href="{% url 'logout' %}"><i class="fa-solid fa-right-from-bracket"></i></i></a>
         </div>
 
         <a id="sellbutton" href="{% url 'buy' %}">Buy</a>

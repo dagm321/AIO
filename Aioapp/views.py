@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, HttpResponse
 from django.contrib.auth import authenticate, login
 from .models import *
 from django.contrib.auth import get_user_model
-from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth import update_session_auth_hash, logout
 from django.contrib.auth.decorators import login_required
 
 User = get_user_model()
@@ -77,7 +77,7 @@ def sell(request):
             description = description,
             image = image,
             price = price,
-            username = request.user,
+            user = request.user,
             status = "Used" if used_checkbox else "New" if new_checkbox else ""
         )   
         product.save()
@@ -146,3 +146,8 @@ def viewprofile(request):
 def popups(request):
 
     return render(request, 'popups.html')
+
+
+def custom_logout(request):
+    logout(request)
+    return redirect('login')

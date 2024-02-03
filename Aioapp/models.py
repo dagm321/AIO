@@ -66,7 +66,7 @@ class Product(models.Model):
     image = models.ImageField(blank=False, upload_to='image', null=False)
     date = models.DateTimeField(default=timezone.now)
     description = models.TextField(max_length=87, blank=False, null=False)
-    username = models.ForeignKey(User, on_delete = models.CASCADE)
+    user = models.ForeignKey(User, on_delete = models.CASCADE)
 
     def __str__(self):
         return self.product_title

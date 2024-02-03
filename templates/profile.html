@@ -15,14 +15,18 @@
     <div class="header">
         <h1>AIO</h1>
         <div class="icons">
-            <a href=""><i class="fa-solid fa-house"></i></a></i>
-            <a href=""><i class="fa-solid fa-envelope"></i></a>
-            <a href=""><i class="fa-solid fa-user"></i></a>
+            <a href="{% url 'buy' %}"><i class="fa-solid fa-house"></i></a></i>
+            <a href="{% url 'message' %}"><i class="fa-solid fa-envelope"></i></a>
+            <a href="{% url 'logout' %}"><i class="fa-solid fa-right-from-bracket"></i></i></a>
         </div>
 
         <!-- <a id="sellbutton" href="">Buy</a> -->
         <div class="username_and_profilepic">
-            <img id="post_profile_pic" src="{% static 'image/profile.jpg' %}" alt="">
+            {% if user.profile_picture %}
+                <img id="post_profile_pic" src="{{ user.profile_picture.url }}" alt="">
+            {% else %}
+                <img src="{% static 'image/profile.jpg' %}" alt="">
+            {% endif %}
             <p id="username">{{ user.username }}</p>
         </div>
     </div>
@@ -34,7 +38,11 @@
         <div class="main_body">
             <div class="display_profile">
                 <div class="profile">
-                    <img src="{% static 'image/profile.jpg'%}" alt="">
+                    {% if user.profile_picture %}
+                        <img src="{{ user.profile_picture.url }}" alt="">
+                    {% else %}
+                        <img src="{% static 'image/profile.jpg' %}" alt="">
+                    {% endif %}
                     <p>{{ user.username }}</p>
                 </div>
             </div>
