@@ -59,8 +59,11 @@
                     <div class="product_description">
                         <p>{{ product.description }}</p>
                     </div>
-                    <div class="product_price"><p>{{ product.price }}$</p></div>
-                    <div class="buy_button"><a href="">Buy</a></div>
+                    <div class="post_bottom">
+                        <p>{{ product.status }}</p>
+                        <a href="">Buy</a>
+                        <p>{{ product.price }}$</p>
+                    </div>
                 </div>
                 {%endfor%}
                 <!---------------end post-------------->
@@ -84,12 +87,12 @@
                         <p>This is some description about
                             the product and this is some decriopiton about it</p>
                     </div>
-                    <div class="product_price"><p>100$</p></div>
-                    
-                    <div class="buy_button">
+                    <div class="post_bottom">
                         <p>Status</p>
                         <a href="">Buy</a>
+                        <p>100$</p>
                     </div>
+
                 </div>
                 {%endfor%}
                 <!---------------end post-------------->
