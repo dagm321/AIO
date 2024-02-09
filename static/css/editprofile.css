@@ -59,6 +59,7 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
+    margin-top: 22px;
 }
 .user_information {
     width: 400px;
@@ -87,7 +88,7 @@ body {
     font-weight: bold;
 }
 .information .btn {
-    margin-top: 20px;
+    margin-top: 0px;
 }
 .user_information input {
     background-color: #432F2F;
@@ -104,22 +105,24 @@ body {
 }
 .user_information {
     margin-right: 60px;
+    margin-top: 20px;
 }
 .user_information input[type="text"], input[type="password"], input[type="tel"] {
     color: #D9D9D9;
     text-indent: 30px;
 }
-.profile input[type="file"] {
+.user_information input[type="file"] {
     display: none;
 }
-.profile  label {
-    margin-top: 20px;
+.user_information  label {
+    margin-top: -60px;
+    margin-left: -27px;
     font-size: 14px;
     border-bottom: 1px solid white;
-    padding: 10px;
+    padding: 7px;
     cursor: pointer;
 }
-.profile label:hover {
+.user_information label:hover {
     color: white;
     transition: 0.4s ease;
 }

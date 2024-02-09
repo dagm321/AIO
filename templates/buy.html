@@ -60,7 +60,11 @@
                         <p>{{ product.description }}</p>
                     </div>
                     <div class="post_bottom">
-                        <p>{{ product.status }}</p>
+                        {% if product.status == "New" %}
+                            <p class="status">{{ product.status }}</p>
+                        {% else %}
+                            <p class="">{{ product.status }}</p>
+                        {% endif %}
                         <a href="">Buy</a>
                         <p>{{ product.price }}$</p>
                     </div>

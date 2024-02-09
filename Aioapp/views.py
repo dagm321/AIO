@@ -13,6 +13,10 @@ def signup(request):
         username = request.POST.get('username')
         phone_number = request.POST.get('phone_number')
         password = request.POST.get('password')
+        re_password = request.POST.get('re_password')
+        if (password != re_password):
+            raise ValueError("Your password must much")
+
 
         user = User.objects.create_user(
             full_name = full_name,
@@ -40,7 +44,7 @@ def buy(request):
     numbers = range(1, 4)
     products = Product.objects.order_by('-date')
     context = {
-        'numbers' : numbers,
+        # 'numbers' : numbers,
         'products' : products
     }
     return render(request, 'buy.html', context)

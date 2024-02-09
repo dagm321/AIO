@@ -5,8 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>viewbuy</title>
     <link rel="stylesheet" href="{% static 'css/viewbuy.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6fb0a3828a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <div class="mainbody">
+        <div class="body">
+
+            <div class="columns">
+                <div class="close">
+                    <h3><i class="fa-solid fa-arrow-left"></i></h3>
+                </div>
+
+                <div class="col-1">
+                    <p>Product Title</p>
+                    <img src="{% static 'image/headset.jpg' %}" alt="">
+                    
+                    <div class="down">
+                        <div class="ask">
+                            <p>Description</p>
+                            <p>Date</p>
+                            <p>Price</p>
+                            <p>Status</p>
+                        </div>
+                        <div class="response">
+                            <p> This is some Description about the product</p>
+                            <p>Date</p>
+                            <p>Price</p>
+                            <p>Status</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-2"></div>
+
+                <div class="col-3">
+                    <div class="box">
+                        <div class="user_info">
+                            <!-- row one -->
+                            <div class="profile">
+                                <div class="profile_pic">
+                                    <img id="" src="{% static 'image/profile.jpg' %}" alt="">
+                                    <p>Username</p>
+                                </div>
+                            </div>
+                            <!-- row two -->
+                            <div class="user_information">
+                                <div class="user">
+                                    <div class="ask1">
+                                        <p>Full Name</p>
+                                        <p>Phone Number</p>
+                                    </div>
+                                    <div class="response1">
+                                        <p>Abebe Kebede</p>
+                                        <p>+25108236764</p>
+                                    </div>
+                                </div>
+                                <div class="btn">
+                                    <a href="">Message <i class="fa-regular fa-message"></i></a>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>

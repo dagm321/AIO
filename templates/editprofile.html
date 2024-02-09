@@ -17,11 +17,15 @@
             <div class="information">
                 <div class="display_profile">
                     <div class="profile">
-                        <img src="{% static 'image/profile.jpg'%}" alt="">
+                        {% if user.profile_picture %}
+                            <img src="{{ user.profile_picture.url }}" alt="">
+                        {% else %}
+                            <img src="{% static 'image/profile.jpg'%}" alt="">
+                        {% endif %}
                         <form action="" method="post" enctype="multipart/form-data">
-                            <input type="file" name="image" id="editpro">
+                            <!-- <input type="file" name="image" id="editpro"> -->
                         </form>
-                        <label for="editpro">Edit Picture</label>
+                        <!-- <label for="editpro">Edit Picture</label> -->
                     </div>
                 </div>
                 <div class="info_body">
@@ -33,9 +37,11 @@
                         <p>Password</p>
                         <p>Re-enter Password</p>
                     </div>
-                    <form method="post">
+                    <form method="post" enctype="multipart/form-data">
                         {% csrf_token %}
                         <div class="user_information">
+                            <input type="file" name="image" id="editpro">
+                            <label for="editpro">Edit Picture</label>
                             <input type="text" value="{{ user.full_name }}" name="full_name" id="">
                             <input type="text" value="{{user.username}}" name="username" id="">
                             <input type="text" value="{{user.description}}" name="description" id="">

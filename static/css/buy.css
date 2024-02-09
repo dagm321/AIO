@@ -158,6 +158,10 @@ body {
     color: #432F2F;
     margin-top: 15px;
 }
+.post_bottom .status {
+    background-color: red;
+    color: white;
+}
 .post_bottom a:hover{
     background-color: #432F2F;
     color: #D9D9D9;
@@ -225,3 +229,4 @@ body {
 .body_2 {
     margin-left: 30px;
 }
+
