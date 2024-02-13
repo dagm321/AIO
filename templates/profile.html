@@ -58,7 +58,11 @@
                     <div class="user_information">
                         <p>{{ user.full_name }}</p>
                         <p>{{user.username}}</p>
-                        <p style="text-align: start;">{{ user.description }}</p>
+                        {% if user.descripiton ==  None %}
+                        <p style="text-align: start;"></p>
+                        {% else %}
+                            <p style="text-align: start;">{{ user.description }}</p>
+                        {% endif %}
                         <p>{{ user.phone_number }}</p>
                     </div>
                 </div>
@@ -67,5 +71,10 @@
         </div>
     </div>
 
+
+     <!------------ popup message -->
+    {% include 'popups.html' %}
+        
+            
 </body>
 </html>

@@ -1,12 +1,72 @@
-<html lang="en">
-<head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>popups</title>
-    <link rel="stylesheet" href="{% static 'css/popups.css' %}">
-</head>
-<body>
-    
-</body>
-</html>
+<style>
+    /* popup message css */
+.popup_content {
+    width: 400px;
+    height: 150px;
+    background-color: #432F2F;
+    border-radius: 30px;
+
+}
+.popup {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+}
+.popup_content .header {
+    display: flex;
+    justify-content: space-around;
+}
+.header p {
+    color: #D9D9D9;
+    margin-top: -20;
+}
+.popup_content .message {
+    display: flex;
+    justify-content: center;
+    margin-top: -40px;
+}
+.message p {
+    color: #D9D9D9;
+}
+.header .close_btn {
+    background-color: #D9D9D9;
+    color: #432F2F;
+    padding: 5px 9px;
+    border-radius: 100px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.header .close_btn:hover {
+    background-color: #b5b5b5;
+    color: white;
+    transition: 0.2s ease;
+}
+.close-popup {
+    visibility: hidden;
+}
+/* end of pop up message css */
+</style>
+
+
+<!-- pop up message box -->
+    {% for msg in messages %}
+        <div class="popup" id="popup">
+            <div class="popup_content">
+                <div class="header">
+                    <p>AIO</p>
+                    <p></p>
+                    <p></p>
+                    <p class="close_btn" onclick="close_popup()" id="close_btn">X</p>
+                </div>
+                <div class="message">
+                    <p>{{ msg }}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    <script>
+        let popup = document.getElementById('popup');
+        function close_popup () {
+            popup.classList.add("close-popup");
+        }
+    </script>

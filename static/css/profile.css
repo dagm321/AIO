@@ -53,17 +53,18 @@ body {
     color: #432F2F;
     margin-left: 30px;
 }
+.header .username_and_profilepic {
+    display: flex;
+}
 .header .username_and_profilepic p{
     color: black;
     margin-left: 10px;
+    margin-top: 15;
 }
 .header .username_and_profilepic img {
     width: 50px;
     height: 50px;
     border-radius: 50px;
-}
-.header .username_and_profilepic {
-    display: flex;
 }
 /*---------------------- end header css ---------*/
 .main {

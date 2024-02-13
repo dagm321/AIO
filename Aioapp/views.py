@@ -4,6 +4,7 @@ from .models import *
 from django.contrib.auth import get_user_model
 from django.contrib.auth import update_session_auth_hash, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 User = get_user_model()
 
@@ -24,6 +25,7 @@ def signup(request):
             username = username,
             password = password
         )
+        messages.success(request, "Successfully reqistered")
         return redirect('login')
 
     return render(request, 'signup.html')
@@ -44,7 +46,7 @@ def buy(request):
     numbers = range(1, 4)
     products = Product.objects.order_by('-date')
     context = {
-        # 'numbers' : numbers,
+        'numbers' : numbers,
         'products' : products
     }
     return render(request, 'buy.html', context)
@@ -85,8 +87,7 @@ def sell(request):
             status = "Used" if used_checkbox else "New" if new_checkbox else ""
         )   
         product.save()
-        return HttpResponse("Succesfully posted")
-
+        messages.success(request, "Product Posted Successfully") 
 
     return render(request, 'sell.html')
 # @login_required
@@ -131,6 +132,7 @@ def editprofile(request):
         
         # Update the session to avoid automatic logout after password change
         update_session_auth_hash(request, user)
+        messages.success(request, "Profile Saved")
         return redirect('profile')
 
 
